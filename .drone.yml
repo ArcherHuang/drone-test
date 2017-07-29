@@ -1,5 +1,15 @@
-build:  
-  image: drone/drone:0.8
-  commands:
-    - node -v
-    - npm -v
+clone:
+  git:
+    image: plugins/git
+    depth: 50
+    tags: true
+
+pipeline:
+  scp:
+    image: appleboy/drone-scp
+    host: 139.59.123.108
+    username: drone
+    password: 1234567890
+    port: 22
+    target: /Users/archer/Desktop/drone
+    source: test.txt
