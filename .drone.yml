@@ -11,5 +11,5 @@ pipeline:
     username: drone
     password: 1234567890
     port: 22
-    target: /home/drone
+    target: /home/drone/${DRONE_REPO}
     source: /Users/archer/Desktop/drone/test.txt
