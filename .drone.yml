@@ -1,0 +1,5 @@
+build:  
+  image: drone/drone:0.8
+  commands:
+    - node -v
+    - npm -v
